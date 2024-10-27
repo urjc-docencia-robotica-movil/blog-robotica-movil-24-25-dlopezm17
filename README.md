@@ -22,3 +22,6 @@ The program first takes the localitation of the objective and, if is close enoug
 *Problems*
 
 Due to the rectangular shape of the car it could crash it's back without noticing it. 
+
+
+Video: https://urjc-my.sharepoint.com/:v:/g/personal/d_lopezm_2022_alumnos_urjc_es/EWfslzSmUvZBowyU8SdqqjgBCgC74myvLIRlUxsLn4tcgA?e=nvO65z&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
