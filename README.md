@@ -12,3 +12,13 @@ With the normal model working, I started the ackerman mode one, but I founded mu
 Video of the normal mode car: https://urjc-my.sharepoint.com/:v:/g/personal/d_lopezm_2022_alumnos_urjc_es/Eal-BON6vtFAuzkbZmdfDHcB4R6P8X35wd0bLjyIcLJM0w?e=Ej7bT5&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 Video of the ackerman mode car: https://urjc-my.sharepoint.com/:v:/g/personal/d_lopezm_2022_alumnos_urjc_es/Ecz6UjSCm7ZPkMarmCMuiJUB8WY_-Rf3RX6hjEV0rU5YjQ?e=nTzZYb&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+
+
+**P3**
+
+The program first takes the localitation of the objective and, if is close enough, mark it as checked and take the next one. Then it parse the laser data to create the repulsive vector. This is done by firstly changing the angle of the laset to have the x = 0 in the same position as the car have. Then it calculate the force by scaling the module first by using the function 5/(dist²) to increase exponentialy the force if the obstacle is getting closer and closer and then multipling it by (1+cos(angle))¹·⁵ to increase the importance to the obstacles in front of the robot. With the force I calculate the position and I add every data for each laser data and calculate the average. For the actractive vector I just take the coordenates, calculate the distance and the angle and the x, y coordenates would be the minimun between 4 and the distance (to not get enormous vectors) and multiply by the cos/sin respectively. Usin the two vectors I sum them together multiply by alpha and beta. The resultant force would be scaled and used to get the speed. If the vercor is in front of the car, the speed will ignore the y coordenate but, if not, both would be used. The speed is set to have at least an absolute value of 0.3 to avoid the situations in which the car is stucked between the atractive and repulsive vector.
+
+*Problems*
+
+Due to the rectangular shape of the car it could crash it's back without noticing it. 
