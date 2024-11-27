@@ -44,6 +44,6 @@ The algorithim that caluclates the map was extremely time consuming so I had to 
 
 Sometimes if the car was far away from the objetive, the amount of nodes that it needed was high, and if that number was used when the car was close it expanded too much, so I used a variable amount of extra nodes to fix it.
 
-Video:
+Video: https://urjc-my.sharepoint.com/:v:/g/personal/d_lopezm_2022_alumnos_urjc_es/ESd9gAdVpqpNq_35Kd44cScBylTbz26mXkI_AAoxmIn6hg?e=DaC9fa&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 
