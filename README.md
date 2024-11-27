@@ -25,3 +25,25 @@ Due to the rectangular shape of the car it could crash it's back without noticin
 
 
 Video: https://urjc-my.sharepoint.com/:v:/g/personal/d_lopezm_2022_alumnos_urjc_es/EWfslzSmUvZBowyU8SdqqjgBCgC74myvLIRlUxsLn4tcgA?e=nvO65z&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+
+
+
+**P4**
+
+This program is divided in to parts, to calculate the plan and to navigate. Fistly, the code must decide in which mode is in. To do so, it checks it's objetive. If the objetive is different to the one in the previous itertion, it would create a gradient path plan to reach the objetive and, if the objetive is the same that it previously had, the car would navigate to the objetive.
+
+If the robot is in the create plan mode, it would use a BFS algorithm to calculate the cost that it would have in reality to reach the objetive. That is done by putting in a queue the objetive position and calculating the posible next cells of the map in which the robot can be. Then it adds a cost, that is the cost that the previous node had plus the distance betwwen this new position and the one of the previous node. This way the cost is related to the distance that the car have to travel by the shortest route posible. If it would had been the real distance between the point and the objetive, the car could find local minimums for where it won't be able to scape. The gradient path would just calculate a bit more than the nodes expanded when it finds the position of the car. This way it don't calculate the whole map, something that takes a long time but have a little margin to help the car find the initial direction. Onces the gradient plan is finished, it would calculate, if it hadn't been calculated before, a plan that contains a cost for the areas next to the walls. This would aboid the car going next to the walls. When both plans are finished, the definitive one would be the sum of both plans.
+
+While in the navigation mode, the robot would check the cost of the cells surrounding it and would go in the direction of the one with the less cost. When it finds it, ti would convert the coordenades to other relative to the car's position and would be used as the speed the car have to use to reach the objetive.
+
+
+*Problems*
+
+The algorithim that caluclates the map was extremely time consuming so I had to limit the number of times the map was shown in the screen to make it much faster.
+
+Sometimes if the car was far away from the objetive, the amount of nodes that it needed was high, and if that number was used when the car was close it expanded too much, so I used a variable amount of extra nodes to fix it.
+
+Video:
+
+
